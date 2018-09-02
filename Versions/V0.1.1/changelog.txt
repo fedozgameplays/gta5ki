@@ -1,0 +1,6 @@
+V0.1:
+- erster Release
+
+V0.1.1:
+- Code vereinfacht und aufgeräumt
+- Verbesserungen im Fahrverhalten

@@ -1,0 +1,12 @@
+V0.1:
+- erster Release
+
+V0.1.1:
+- Code vereinfacht und aufgeräumt
+- Verbesserungen im Fahrverhalten
+
+V0.2:
+- Trainingsdaten ausgleichen
+
+V0.3:
+- Daten zu einem Model trainieren mit Neural Network
