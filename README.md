@@ -2,12 +2,32 @@
 
 GTA 5 KI in Python
 
-##Vorraussetzungen:
+## Vorraussetzungen:
 
 * Python 3.5
 * numpy
 * opencv
 * pandas
 * win32api
+* Tensorflow
+* tflearn
+* ctypes
 
-## GTA 5 Fenstermodus 800x600 in die obere linke Ecke
+## Für Versionen > V0.3.2:
+* Daten sammeln:
+```
+gta5ki.py record {Fensterbreite} {Fensterhöhe} {Dateiname}
+```
+* Daten ausgleichen:
+```
+gta5ki.py balance {Dateiname Trainingsdaten} {Dateiname ausgeglichene Daten}
+```
+* Neural Network trainineren:
+```
+gta5ki.py train {Fensterbreite} {Fensterhöhe} {Lernrate} {Epochen} {Dateiname ausgeglichene Daten}
+```
+* Neural Network testen:
+```
+gta5ki.py test {Fensterbreite} {Fensterhöhe} {Lernrate} {Epochen}
+```
+## WICHTIG! GTA 5 im Fenstermodus in die obere linke Bildschirmecke.
