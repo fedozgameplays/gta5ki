@@ -1,2 +1,0 @@
-tensorboard --logdir=foo:C:/Users/Kevin/Desktop/V0.2/log
-py -m tensorboard.main --logdir=foo:C:/Users/Kevin/Desktop/V0.2/log
