@@ -22,7 +22,7 @@ gta5ki.py record {Fensterbreite} {Fensterhöhe} {Dateiname}
 ```
 gta5ki.py balance {Dateiname Trainingsdaten} {Dateiname ausgeglichene Daten}
 ```
-* Neural Network trainineren:
+* Neural Network trainieren:
 ```
 gta5ki.py train {Fensterbreite} {Fensterhöhe} {Lernrate} {Epochen} {Dateiname ausgeglichene Daten}
 ```
