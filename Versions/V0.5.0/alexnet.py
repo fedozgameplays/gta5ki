@@ -17,9 +17,9 @@ def alexnet(width, height, lr):
     network = conv_2d(network, 256, 9, activation='relu')
     network = max_pool_2d(network, 9, strides=2)
     network = local_response_normalization(network)
-    network = fully_connected(network, 4096, activation='tanh')
+    network = fully_connected(network, 256, activation='tanh')
     network = dropout(network, 0.5)
-    network = fully_connected(network, 4096, activation='tanh')
+    network = fully_connected(network, 256, activation='tanh')
     network = dropout(network, 0.5)
     network = fully_connected(network, 9, activation='softmax')
     network = regression(network, optimizer='momentum',

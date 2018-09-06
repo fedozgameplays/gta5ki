@@ -50,13 +50,13 @@ def run(screen_width, screen_height, dateiname):
             bild = cv2.cvtColor(bild, cv2.COLOR_BGR2GRAY)
             nn_width = int(screen_width)/10
             nn_height = int(screen_height)/10
-            bild = cv2.resize(bild, (nn_width,nn_height))
+            bild = cv2.resize(bild, (int(nn_width),int(nn_height)))
             tasten = key_check()
             ausgabe = tasten_ausgabe(tasten)
             trainingsdaten.append([bild, ausgabe])
                 
             if len(trainingsdaten) % 500 == 0:
-                print(len(trainingsdaten) + " , speichere...")
+                print(str(len(trainingsdaten)) + " , speichere...")
                 np.save(dateiname, trainingsdaten)
             if len(trainingsdaten) == 20001:
                 sys.exit()

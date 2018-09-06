@@ -10,10 +10,6 @@ import time
 import random
 
 def run(width, height, learning_rate, epochs):
-    width = 80
-    height = 60
-    learning_rate = 1E-3
-    epoch = 10
     model_name = "car-{}-{}-{}-epochs.model".format(float(learning_rate), "alexnet", int(epochs))
 
     t_time = 0.09
