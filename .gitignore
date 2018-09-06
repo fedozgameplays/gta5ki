@@ -2,3 +2,11 @@
 *.npy
 #Keine Models
 checkpoint
+todo.txt
+*.pyc
+*.data-00000-of-00001
+*.index
+*.meta
+*.KEVINPC
+Versions/V0.3.2/run tensorboard.txt
+Versions/V0.3.2/run tensorboard.txt
