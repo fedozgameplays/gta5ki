@@ -30,4 +30,8 @@ gta5ki.py train {Fensterbreite} {Fensterhöhe} {Lernrate} {Epochen} {Dateiname a
 ```
 gta5ki.py test {Fensterbreite} {Fensterhöhe} {Lernrate} {Epochen}
 ```
+
+## Für Versionen > V0.6.0:
+RUN.bat starten
+
 ## WICHTIG! GTA 5 im Fenstermodus in die obere linke Bildschirmecke.
