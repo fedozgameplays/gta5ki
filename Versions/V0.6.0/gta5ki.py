@@ -1,5 +1,5 @@
 import main
-import daten_ausgleichen
+#import daten_ausgleichen
 import model_trainieren
 import model_testen
 import sys
