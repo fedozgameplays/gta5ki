@@ -2,3 +2,5 @@ width = 80
 height = 60
 learning_rate = 1E-3
 epochs = 10
+width = 960
+height = 540
