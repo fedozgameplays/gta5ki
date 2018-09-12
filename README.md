@@ -6,7 +6,7 @@ GTA 5 KI in Python
 
 * Python 3.5
 * numpy
-* opencv
+* opencv-python
 * pandas
 * win32api
 * Tensorflow
