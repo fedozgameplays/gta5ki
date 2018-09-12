@@ -17,9 +17,9 @@ def alexnet(width, height, lr):
     network = conv_2d(network, 256, 3, activation='relu')
     network = max_pool_2d(network, 3, strides=2)
     network = local_response_normalization(network)
-    network = fully_connected(network, 512, activation='tanh')
+    network = fully_connected(network, 1024, activation='tanh')
     network = dropout(network, 0.5)
-    network = fully_connected(network, 512, activation='tanh')
+    network = fully_connected(network, 1024, activation='tanh')
     network = dropout(network, 0.5)
     network = fully_connected(network, 9, activation='softmax')
     network = regression(network, optimizer='momentum',
@@ -27,7 +27,7 @@ def alexnet(width, height, lr):
                          learning_rate=lr, name='targets')
 
     model = tflearn.DNN(network, checkpoint_path='model_alexnet',
-                        max_checkpoints=1, tensorboard_verbose=2, tensorboard_dir='log')
+                        max_checkpoints=1, tensorboard_verbose=0, tensorboard_dir='log')
 
     return model
 

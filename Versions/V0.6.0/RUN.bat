@@ -32,7 +32,7 @@ py gta5ki.py record %width% %height% %filename%
 :train
 cls
 py -m pip uninstall tensorflow -y -q
-py -m pip install tensorflow-gpu -q
+py -m pip install tensorflow-gpu==1.10.0 -q
 cls
 echo Fensterbreite:
 set /p width=
@@ -50,6 +50,7 @@ echo Dateiname:
 set /p filename=
 cls
 py gta5ki.py train %width% %height% %lr% %epochs% %filename%
+pause
 
 :test
 cls

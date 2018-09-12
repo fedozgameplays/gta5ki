@@ -9,15 +9,9 @@ from random import shuffle
 def run(width, height, learning_rate, epochs):
 
     batchsize = 32
-    Dateiende = 18
-    
-    for i in range(1,10):
-        check_model = "car-{}-{}-{}.model".format(str(i),str(learning_rate),str(epochs))
-        if os.path.isfile(check_model):
-            print("Model existiert bereits: "+str(check_model))
-        else:
-            model_name = "car-{}-{}-{}.model".format(str(i),str(learning_rate),str(epochs))
-            return model_name
+    Dateiende = 57
+    i=1
+    model_name = "car-{}-{}-{}.model".format(str(i),str(learning_rate),str(epochs))
 
     nn_width = int(width)/2
     nn_height = int(height)/2
