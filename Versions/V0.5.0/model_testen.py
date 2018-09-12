@@ -11,7 +11,8 @@ import random
 
 def run(width, height, learning_rate, epochs):
     model_name = "car-{}-{}-{}-epochs.model".format(float(learning_rate), "alexnet", int(epochs))
-
+    nn_width = int(width)/10
+    nn_height = int(height)/10
     t_time = 0.09
 
     def geradeaus():
@@ -79,7 +80,7 @@ def run(width, height, learning_rate, epochs):
 
 
 
-    model = alexnet(int(width), int(height), float(learning_rate))
+    model = alexnet(int(nn_width), int(nn_height), float(learning_rate))
     model.load(model_name)
 
     for i in list(range(6))[::-1]:
@@ -96,8 +97,9 @@ def run(width, height, learning_rate, epochs):
             nn_height = int(height)/10
             bild = cv2.resize(bild, (int(nn_width),int(nn_height)))
 
-            vorhersage = model.predict([bild.reshape(int(nn_width), int(nn_height), 3)])[0]
-            vorhersage = np.array(vorhersage) * np.array([4.5, 0.1, 0.1, 0.1, 1.8, 1.8, 0.5, 0.5, 0.2])
+            vorhersage = model.predict([bild.reshape(int(nn_width), int(nn_height), 1)])[0]
+            vorhersage = np.array(vorhersage)
+            print(vorhersage)
             auswahl = np.argmax(vorhersage)
 
             if auswahl == 0:
@@ -127,6 +129,8 @@ def run(width, height, learning_rate, epochs):
             elif auswahl == 8:
                 nichts()
                 auswahl_getroffen = "Nichts"
+
+            print(auswahl_getroffen)
                 
                 
 
