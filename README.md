@@ -1,9 +1,11 @@
 # gta5ki
 
 GTA 5 KI in Python
+Trainieren eines selbstfahrenden Autos mithilfe einen Neural Networks
 
 ## Vorraussetzungen:
 
+* Grand Theft Auto V (möglicherweise auch auf andere Spiele anwendbar)
 * Python 3.5
 * numpy
 * opencv-python
