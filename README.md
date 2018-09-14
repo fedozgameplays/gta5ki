@@ -36,7 +36,7 @@ Trainieren eines selbstfahrenden Autos mithilfe einen Neural Networks
    1. GTA starten wie in den Punkten 5-7 beschrieben
    1. __test.py__ starten _(Anleitung zum starten unten)_, auf den Countdown warten und in das Fenster tabben
 
-### gta5ki starten für Versionen > V0.3.2:
+### gta5ki starten für Versionen > V0.3.2 und < V0.6.0:
 * Daten sammeln:
 ```
 gta5ki.py record {Fensterbreite} {Fensterhöhe} {Dateiname}
