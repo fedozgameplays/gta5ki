@@ -7,7 +7,7 @@ from tflearn.layers.merge_ops import merge
 import tensorflow as tf
 
 def inception3(width, height, lr, output=9, model_name = 'inception3.model', device = 'gpu', num = '0'):
-    tflearn.init_graph(num_cores=4,gpu_memory_fraction=0.5)
+    tflearn.init_graph(num_cores=4,gpu_memory_fraction=0.6)
     with tf.device('/{}:{}'.format(device,num)):
         network = input_data(shape=[None, width, height,3], name='input')
         conv1_7_7 = conv_2d(network, 64, 28, strides=4, activation='relu', name = 'conv1_7_7_s2')
