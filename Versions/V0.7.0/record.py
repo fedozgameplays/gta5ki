@@ -79,7 +79,7 @@ def run(screen_width, screen_height):
                 if len(trainingsdaten) % 100 == 0:
                     print("Länge der Trainingsdaten: "+str(len(trainingsdaten)))
                     
-                    if len(trainingsdaten) == 500:
+                    if len(trainingsdaten) == 4000:
                         print("Länge: "+str(len(trainingsdaten)) + ", speichere...")
                         np.save(dateiname, trainingsdaten)
                         trainingsdaten = []
