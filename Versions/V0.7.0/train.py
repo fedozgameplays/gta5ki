@@ -8,15 +8,15 @@ from random import shuffle
 def run(width, height, learning_rate, epochs):
 
     # Batch-size von Neural Network
-    batchsize = 32
+    batchsize = 64
     # Menge der Trainingsdaten
-    Dateiende = ""
+    Dateiende = 16
     # ID vom Model, für mehrere ändern
     model_id = 1
     # Größe des Outputs
     output_size = 9
     # Modelname mit ID, Lernrate und Epochen
-    model_name = "car-{}-{}-{}.model".format(str(model_id),str(learning_rate),str(epochs))
+    model_name = "model{}-{}_lr-{}_epochs".format(str(model_id),float(learning_rate), str(epochs))
 
     # Breite von Neural Network
     nn_width = int(width)/2
@@ -29,7 +29,7 @@ def run(width, height, learning_rate, epochs):
         # Reihenfolge der Trainingsdaten
         daten_rf = [i for i in range(1,Dateiende+1)]
         # Reihenfolge ändern
-        shuffle(daten_rf)
+        #shuffle(daten_rf)
 
         for count, i in enumerate(daten_rf):
             try:
@@ -40,8 +40,8 @@ def run(width, height, learning_rate, epochs):
                 print("Daten werden geladen: %s, Länge: %s" % (dateiname,str(len(trainingsdaten))))
 
                 # Trainingsdaten teilen in train und test Daten
-                train = trainingsdaten[:-50]
-                test = trainingsdaten[-50:]
+                train = trainingsdaten[:-500]
+                test = trainingsdaten[-500:]
                 print("Länge train: %s" % (len(train)))
                 print("Länge test: %s" % (len(test)))
 
