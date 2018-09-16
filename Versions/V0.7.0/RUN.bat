@@ -54,8 +54,6 @@ pause
 
 :test
 cls
-py -m pip uninstall tensorflow-gpu -y -q
-py -m pip install tensorflow -q
 cls
 echo Fensterbreite:
 set /p width=
