@@ -73,7 +73,7 @@ def run(width, height, learning_rate, epochs):
         ReleaseKey(A)
 
     def nichts():
-        if random.randrange(0,3) == 1:
+        if random.randrange(0,4) == 1:
             PressKey(W)
         else:
             ReleaseKey(W)
@@ -96,12 +96,12 @@ def run(width, height, learning_rate, epochs):
         if not paused:
             bild = bild_erfassen(region=(0,30,int(width),int(height)+26))
             bild = cv2.cvtColor(bild, cv2.COLOR_BGR2RGB)
-            nn_width = int(width)/2
-            nn_height = int(height)/2
             bild = cv2.resize(bild, (int(nn_width),int(nn_height)))
+            #cv2.imshow("test", bild)
+            #time.sleep(0.09)
 
             vorhersage = model.predict([bild.reshape(int(nn_width), int(nn_height), 3)])[0]
-            vorhersage = np.array(vorhersage) #* np.array([4.5, 0.1, 0.1, 0.1,  1.8,   1.8, 0.5, 0.5, 0.2])
+            vorhersage = np.array(vorhersage)  * np.array([0.3, 0.9, 2.8, 2.8, 1.5, 1.5, 0.5, 0.5, 0.7])
             #print(vorhersage)
             auswahl = np.argmax(vorhersage)
 
@@ -134,6 +134,10 @@ def run(width, height, learning_rate, epochs):
                 auswahl_getroffen = "Nichts"
 
             print(auswahl_getroffen)
+
+##            if cv2.waitKey(15) & 0xFF == ord("q"):
+##                cv2.destroyAllWindows()
+##                break
                 
                 
 
