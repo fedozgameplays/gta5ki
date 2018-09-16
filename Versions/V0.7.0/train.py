@@ -24,6 +24,8 @@ def run(width, height, learning_rate, epochs):
     nn_height = int(height)/2
     
     model = inception3(int(nn_width), int(nn_height), float(learning_rate), output=int(output_size))
+    #load previous model
+    #model.load(model_name)
 
     for e in range(int(epochs)):
         # Reihenfolge der Trainingsdaten
