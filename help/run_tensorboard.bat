@@ -1,0 +1,1 @@
+py -m tensorboard.main --logdir=foo:G:/gta5ki/Versions/V0.7.0/log
