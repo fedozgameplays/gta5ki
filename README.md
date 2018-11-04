@@ -7,12 +7,13 @@ Trainieren eines selbstfahrenden Autos mithilfe einen Neural Networks
 
 * Grand Theft Auto V (möglicherweise auch auf andere Spiele anwendbar)
 * Python 3.5 oder höher: [Download](https://www.python.org/downloads/release/python-354/)
+* Mindestens 8GB RAM, Empfohlen: 16GB oder mehr
 * numpy: `pip install numpy`
 * opencv: `pip install opencv-python`
-* pandas: `pip install pandas`
 * win32api: `pip install pip install pywin32` und `pip install pypiwin32`
 * tensorflow: _siehe unten_
 * tflearn: `pip install tflearn`
+* h5py: `pip install h5py`
 
 ## Anleitung:
 1. Neuste Version der KI aus /Versions herunterladen
