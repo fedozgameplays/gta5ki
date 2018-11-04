@@ -11,3 +11,4 @@ todo.txt
 Versions/V0.3.2/run tensorboard.txt
 Versions/V0.3.2/run tensorboard.txt
 Versions/V0.3.2/run tensorboard.txt
+*.h5
